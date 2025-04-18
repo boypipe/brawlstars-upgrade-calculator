@@ -17,13 +17,19 @@
       <label for="start_level">Current Level:</label>
       <select id="start_level">
         <option value="">--</option>
-        ${[...Array(11)].map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join("")}
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+        <option value="10">10</option><option value="11">11</option>
       </select>
 
       <label for="end_level">Desired Level:</label>
       <select id="end_level">
         <option value="">--</option>
-        ${[...Array(11)].map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join("")}
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+        <option value="10">10</option><option value="11">11</option>
       </select>
     </div>
 
@@ -31,7 +37,7 @@
       <label for="gadgets">Gadgets:</label>
       <input type="number" id="gadgets">
       <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" class="icon">
-      
+
       <label for="star_powers">Star Powers:</label>
       <input type="number" id="star_powers">
       <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" class="icon">
@@ -66,6 +72,11 @@
   </form>
 
   <div id="results"></div>
+
+  <footer>
+    <p>All rights reserved by Supercell. Icons from <a href="https://noff.gg" target="_blank">noff.gg</a> and <a href="https://brawlstars.fandom.com" target="_blank">Brawl Stars Wiki</a>.<br>
+    Coded by ChatGPT 🤖</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

@@ -27,7 +27,7 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
 
   let coins = 0, points = 0;
 
-  if (start && end && start < end) {
+  if (!isNaN(start) && !isNaN(end) && start < end) {
     for (let i = start - 1; i < end - 1; i++) {
       coins += levelData[i].coins;
       points += levelData[i].points;

@@ -1,92 +1,98 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://m.gettywallpapers.com/wp-content/uploads/2021/08/Brawl-Stars-Wallpaper-4k.jpeg') no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
-  text-align: center;
-}
-
-header {
-  background: #1b3c56;
-  padding: 20px;
   color: white;
 }
 
-#logo {
-  width: 60px;
-  display: block;
-  margin: 0 auto 10px;
+header {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 0;
 }
 
-h1 {
-  margin: 0;
-  font-size: 24px;
+#logo {
+  width: 80px;
+  margin-bottom: 10px;
 }
 
 form {
-  max-width: 800px;
-  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.7);
   padding: 20px;
-  background: #fff;
-  border-radius: 10px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 800px;
 }
 
 .row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
 
 label {
-  margin: 5px;
-  min-width: 110px;
+  flex: 1 1 120px;
   text-align: right;
+  margin-right: 10px;
 }
 
 input, select {
-  padding: 5px;
+  padding: 6px;
   width: 80px;
-  margin: 0 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: none;
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin-left: 5px;
 }
 
 button {
-  background-color: #1b3c56;
-  color: white;
+  display: block;
+  margin: 20px auto;
+  background: #ffc107;
+  color: black;
   padding: 10px 30px;
+  font-size: 16px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #155176;
+  background: #e0a800;
 }
 
 #results {
-  margin: 30px auto;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px auto;
   padding: 20px;
-  width: 350px;
-  text-align: left;
+  max-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: white;
 }
 
-#results p {
-  font-size: 16px;
-}
-
-.result-icon {
-  height: 20px;
+#results img {
   vertical-align: middle;
+  width: 20px;
   margin-right: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
 }
