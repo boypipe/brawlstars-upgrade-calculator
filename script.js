@@ -13,15 +13,9 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
   const brawlers = getVal("brawlers") || 1;
 
   const levelData = [
-    { coins: 20, points: 20 },
-    { coins: 35, points: 30 },
-    { coins: 75, points: 50 },
-    { coins: 140, points: 80 },
-    { coins: 290, points: 130 },
-    { coins: 480, points: 210 },
-    { coins: 800, points: 340 },
-    { coins: 1250, points: 550 },
-    { coins: 1875, points: 890 },
+    { coins: 20, points: 20 }, { coins: 35, points: 30 }, { coins: 75, points: 50 },
+    { coins: 140, points: 80 }, { coins: 290, points: 130 }, { coins: 480, points: 210 },
+    { coins: 800, points: 340 }, { coins: 1250, points: 550 }, { coins: 1875, points: 890 },
     { coins: 2800, points: 1440 }
   ];
 
@@ -36,8 +30,8 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
 
   coins += gadgets * 1000 + stars * 2000 + gears * 1000 + epic * 1500 + mythic * 2000 + hyper * 5000;
 
-  let totalCoins = coins * brawlers;
-  let totalPoints = points * brawlers;
+  const totalCoins = coins * brawlers;
+  const totalPoints = points * brawlers;
 
   document.getElementById("results").innerHTML = `
     <h2>Result</h2>
