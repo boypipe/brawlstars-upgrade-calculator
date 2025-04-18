@@ -27,13 +27,14 @@ h1 {
 /* Form styling */
 form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
   justify-content: center;
   padding: 20px;
   margin: 20px;
 }
 
+/* Styling for each input container */
 .input-container {
   display: flex;
   flex-direction: column;
@@ -87,11 +88,11 @@ button:hover {
   margin: 5px 0;
 }
 
-/* Icons for different items */
+/* Icons for different items aligned horizontally */
 .icon {
   width: 30px;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 /* Ensure that the calculation form is centrally aligned */
@@ -99,4 +100,17 @@ form {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .input-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
