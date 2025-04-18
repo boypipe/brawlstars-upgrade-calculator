@@ -16,12 +16,13 @@ document.getElementById("calc-form").addEventListener("submit", function (e) {
 
     const start = parseInt(document.getElementById("start_level").value);
     const end = parseInt(document.getElementById("end_level").value);
-    const gadget = document.getElementById("gadget").checked;
-    const starPower = document.getElementById("star_power").checked;
+
+    const gadgets = parseInt(document.getElementById("gadgets").value);
+    const starPowers = parseInt(document.getElementById("star_powers").value);
     const gears = parseInt(document.getElementById("gears").value);
-    const epic = document.getElementById("epic").checked;
-    const mythic = document.getElementById("mythic").checked;
-    const hypercharge = document.getElementById("hypercharge").checked;
+    const epicGears = parseInt(document.getElementById("epic_gears").value);
+    const mythicGears = parseInt(document.getElementById("mythic_gears").value);
+    const hypercharge = parseInt(document.getElementById("hypercharge").value);
 
     if (start >= end || start < 1 || end > 11) {
         document.getElementById("results").innerHTML = "<p style='color:red;'>Invalid level range.</p>";
@@ -38,12 +39,12 @@ document.getElementById("calc-form").addEventListener("submit", function (e) {
         }
     }
 
-    if (gadget) totalCoins += 1000;
-    if (starPower) totalCoins += 2000;
-    totalCoins += gears * 1000;
-    if (epic) totalCoins += 1500;
-    if (mythic) totalCoins += 2000;
-    if (hypercharge) totalCoins += 5000;
+    totalCoins += (gadgets * 1000);
+    totalCoins += (starPowers * 2000);
+    totalCoins += (gears * 1000);
+    totalCoins += (epicGears * 1500);
+    totalCoins += (mythicGears * 2000);
+    totalCoins += (hypercharge * 5000);
 
     document.getElementById("results").innerHTML = `
         <h2>Upgrade Cost</h2>
