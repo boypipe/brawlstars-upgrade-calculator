@@ -9,6 +9,7 @@ function updateResults() {
   const epicGears = parseInt(document.getElementById("epic_gears").value);
   const mythicGears = parseInt(document.getElementById("mythic_gears").value);
   const hypercharge = parseInt(document.getElementById("hypercharge").value);
+  const brawlers = parseInt(document.getElementById("brawlers").value);
 
   // Validation for start and end levels
   if (start >= end || start < 1 || end > 11) {
@@ -34,11 +35,15 @@ function updateResults() {
   totalCoins += (mythicGears * 2000);
   totalCoins += (hypercharge * 5000);
 
+  // Multiply the cost by the number of brawlers
+  totalCoins *= brawlers;
+  totalPP *= brawlers;
+
   // Display results
   document.getElementById("results").innerHTML = `
     <h2>Upgrade Cost</h2>
-    <p>🔹 Total Power Points: <strong>${totalPP}</strong></p>
-    <p>🔹 Total Coins: <strong>${totalCoins}</strong></p>
+    <p>🔹 Total Power Points (for ${brawlers} brawler(s)): <strong>${totalPP}</strong></p>
+    <p>🔹 Total Coins (for ${brawlers} brawler(s)): <strong>${totalCoins}</strong></p>
   `;
 }
 
@@ -47,5 +52,5 @@ document.querySelectorAll('input, select').forEach(input => {
   input.addEventListener('input', updateResults);
 });
 
-// Call once to initialize with default values
-updateResults();
+// Initialize results on page load
+window.onload = updateResults;

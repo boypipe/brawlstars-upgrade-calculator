@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brawl Stars Upgrade Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <h1>Brawl Stars Upgrade Calculator</h1>
 
   <form id="calc-form">
-    <label>Current Level:
-      <select id="start_level" required>
-        <option value="">Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </label><br>
+    <label for="start_level">Start Level:</label>
+    <select id="start_level">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+    </select>
 
-    <label>Target Level:
-      <select id="end_level" required>
-        <option value="">Select</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-      </select>
-    </label><br>
+    <label for="end_level">End Level:</label>
+    <select id="end_level">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+    </select>
 
-    <label>Gadgets (1000 coins each): <input type="number" id="gadgets" min="0" value="0" /></label><br>
-    <label>Star Powers (2000 coins each): <input type="number" id="star_powers" min="0" value="0" /></label><br>
-    <label>Regular Gears (1000 coins each): <input type="number" id="gears" min="0" value="0" /></label><br>
-    <label>Epic Gears (1500 coins each): <input type="number" id="epic_gears" min="0" value="0" /></label><br>
-    <label>Mythic Gears (2000 coins each): <input type="number" id="mythic_gears" min="0" value="0" /></label><br>
-    <label>Hypercharge (5000 coins each): <input type="number" id="hypercharge" min="0" value="0" /></label><br>
+    <label for="gadgets">Gadgets:</label>
+    <input type="number" id="gadgets" value="0">
 
-    <button type="submit">Calculate</button>
+    <label for="star_powers">Star Powers:</label>
+    <input type="number" id="star_powers" value="0">
+
+    <label for="gears">Gears:</label>
+    <input type="number" id="gears" value="0">
+
+    <label for="epic_gears">Epic Gears:</label>
+    <input type="number" id="epic_gears" value="0">
+
+    <label for="mythic_gears">Mythic Gears:</label>
+    <input type="number" id="mythic_gears" value="0">
+
+    <label for="hypercharge">Hypercharge:</label>
+    <input type="number" id="hypercharge" value="0">
+
+    <label for="brawlers">Number of Brawlers:</label>
+    <input type="number" id="brawlers" class="brawler-multiplier" value="1">
+
+    <div id="results"></div>
   </form>
-
-  <div id="results" style="margin-top: 20px;"></div>
 
   <script src="script.js"></script>
 </body>

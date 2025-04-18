@@ -75,3 +75,12 @@ form button:hover {
     margin: 5px 0;
   }
 }
+
+/* Existing styles... */
+
+/* Style for the Brawlers input */
+form input.brawler-multiplier {
+  width: 48%;
+  margin: 5px 1%;
+}
+
