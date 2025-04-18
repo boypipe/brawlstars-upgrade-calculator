@@ -1,116 +1,92 @@
-/* General Body Styling */
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-/* Header styling */
 header {
-  background-color: #1b3c56;
-  color: white;
+  background: #1b3c56;
   padding: 20px;
+  color: white;
 }
 
 #logo {
-  width: 60px; /* Reduced size */
-  margin-bottom: 10px;
+  width: 60px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 h1 {
-  font-size: 2em;
   margin: 0;
+  font-size: 24px;
 }
 
-/* Form styling */
 form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  justify-content: center;
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
-  margin: 20px;
+  background: #fff;
+  border-radius: 10px;
 }
 
-/* Styling for each input container */
-.input-container {
+.row {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 label {
-  margin-bottom: 5px;
+  margin: 5px;
+  min-width: 110px;
+  text-align: right;
 }
 
 input, select {
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 5px;
+  width: 80px;
+  margin: 0 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
 }
 
 button {
-  padding: 10px 20px;
   background-color: #1b3c56;
   color: white;
+  padding: 10px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  grid-column: span 2;
 }
 
 button:hover {
   background-color: #155176;
 }
 
-/* Results Box Styling */
 #results {
-  display: inline-block;
-  text-align: left;
-  background-color: #fff;
+  margin: 30px auto;
+  background: #fff;
   padding: 20px;
-  margin-top: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: left;
   border-radius: 10px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#results h2 {
-  color: #1b3c56;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #results p {
-  font-size: 1.1em;
-  margin: 5px 0;
+  font-size: 16px;
 }
 
-/* Icons for different items aligned horizontally */
-.icon {
-  width: 30px;
-  margin-left: 10px;
+.result-icon {
+  height: 20px;
   vertical-align: middle;
-}
-
-/* Ensure that the calculation form is centrally aligned */
-form {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  form {
-    grid-template-columns: 1fr;
-  }
-
-  .input-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+  margin-right: 5px;
 }

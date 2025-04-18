@@ -2,95 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brawl Stars Upgrade Calculator</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://static.wikia.nocookie.net/brawlstars/images/9/98/Friendly_Battles.png/revision/latest?cb=20220926141901" type="image/png">
+  <link rel="icon" href="https://static.wikia.nocookie.net/brawlstars/images/9/98/Friendly_Battles.png/" type="image/png">
 </head>
 <body>
-
-  <!-- Header with Logo -->
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Logo_of_Brawl_Stars.svg/1200px-Logo_of_Brawl_Stars.svg.png" alt="Brawl Stars Logo" id="logo">
     <h1>Brawl Stars Upgrade Calculator</h1>
   </header>
 
-  <!-- Form for input fields -->
   <form id="calc-form">
-    <div class="input-container">
+    <div class="row">
       <label for="start_level">Current Level:</label>
       <select id="start_level">
-        <option value="">Select Level</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
+        <option value="">--</option>
+        ${[...Array(11)].map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join("")}
       </select>
 
       <label for="end_level">Desired Level:</label>
       <select id="end_level">
-        <option value="">Select Level</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
+        <option value="">--</option>
+        ${[...Array(11)].map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join("")}
       </select>
     </div>
 
-    <div class="input-container">
+    <div class="row">
       <label for="gadgets">Gadgets:</label>
       <input type="number" id="gadgets">
-      <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" alt="Gadget Icon" class="icon">
-
+      <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" class="icon">
+      
       <label for="star_powers">Star Powers:</label>
       <input type="number" id="star_powers">
-      <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" alt="Star Power Icon" class="icon">
+      <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" class="icon">
     </div>
 
-    <div class="input-container">
+    <div class="row">
       <label for="gears">Gears:</label>
       <input type="number" id="gears">
-      <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp" alt="Gear Icon" class="icon">
+      <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp" class="icon">
 
       <label for="epic_gears">Epic Gears:</label>
       <input type="number" id="epic_gears">
-      <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp" alt="Epic Gear Icon" class="icon">
+      <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp" class="icon">
     </div>
 
-    <div class="input-container">
+    <div class="row">
       <label for="mythic_gears">Mythic Gears:</label>
       <input type="number" id="mythic_gears">
-      <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp" alt="Mythic Gear Icon" class="icon">
+      <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp" class="icon">
 
       <label for="hypercharge">Hypercharge:</label>
       <input type="number" id="hypercharge">
-      <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp" alt="Hypercharge Icon" class="icon">
+      <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp" class="icon">
     </div>
 
-    <div class="input-container">
+    <div class="row">
       <label for="brawlers">Number of Brawlers:</label>
       <input type="number" id="brawlers" value="1">
     </div>
 
-    <!-- Button to trigger calculation -->
     <button type="button" id="calculateBtn">Calculate</button>
   </form>
 
-  <!-- Calculation results -->
   <div id="results"></div>
 
   <script src="script.js"></script>
