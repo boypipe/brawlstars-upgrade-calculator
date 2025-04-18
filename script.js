@@ -1,6 +1,20 @@
-// Function to update the results when the user clicks "Calculate"
+// Upgrade table for levels
+const upgradeTable = {
+  1: { power_points: 0, coins: 0 },
+  2: { power_points: 20, coins: 20 },
+  3: { power_points: 30, coins: 35 },
+  4: { power_points: 50, coins: 75 },
+  5: { power_points: 80, coins: 140 },
+  6: { power_points: 130, coins: 290 },
+  7: { power_points: 210, coins: 480 },
+  8: { power_points: 340, coins: 800 },
+  9: { power_points: 550, coins: 1250 },
+  10: { power_points: 890, coins: 1875 },
+  11: { power_points: 1440, coins: 2800 }
+};
+
+// Function to calculate and display results
 function calculateResults() {
-  // Get values from form fields
   const start = parseInt(document.getElementById("start_level").value);
   const end = parseInt(document.getElementById("end_level").value);
   const gadgets = parseInt(document.getElementById("gadgets").value);
@@ -11,7 +25,7 @@ function calculateResults() {
   const hypercharge = parseInt(document.getElementById("hypercharge").value);
   const brawlers = parseInt(document.getElementById("brawlers").value);
 
-  // Validate levels
+  // Validation for valid level range
   if (start >= end || start < 1 || end > 11) {
     document.getElementById("results").innerHTML = "<p style='color:red;'>Please select a valid level range.</p>";
     return;
@@ -47,5 +61,5 @@ function calculateResults() {
   `;
 }
 
-// Listen for the "Calculate" button click to update results
+// Add event listener for the calculate button
 document.getElementById("calculateBtn").addEventListener("click", calculateResults);
