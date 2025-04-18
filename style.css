@@ -15,7 +15,7 @@ header {
 }
 
 #logo {
-  width: 80px;
+  width: 60px; /* Reduced size */
   margin-bottom: 10px;
 }
 
@@ -88,8 +88,15 @@ button:hover {
 }
 
 /* Icons for different items */
-#results img {
-  width: 25px;
-  margin-right: 10px;
-  vertical-align: middle;
+.icon {
+  width: 30px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Ensure that the calculation form is centrally aligned */
+form {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
