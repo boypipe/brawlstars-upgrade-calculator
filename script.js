@@ -56,8 +56,8 @@ function calculateResults() {
   // Display results
   document.getElementById("results").innerHTML = `
     <h2>Upgrade Cost</h2>
-    <p>🔹 Total Power Points (for ${brawlers} brawler(s)): <strong>${totalPP}</strong></p>
-    <p>🔹 Total Coins (for ${brawlers} brawler(s)): <strong>${totalCoins}</strong></p>
+    <p><img src="https://static.wikia.nocookie.net/brawlstars/images/4/41/Power_Points.png/revision/latest/scale-to-width-down/90?cb=20200917152433" alt="Power Points"> Total Power Points (for ${brawlers} brawler(s)): <strong>${totalPP}</strong></p>
+    <p><img src="https://static.wikia.nocookie.net/brawlstars/images/f/f0/Coins.png/revision/latest/scale-to-width-down/90?cb=20200917152103" alt="Coins"> Total Coins (for ${brawlers} brawler(s)): <strong>${totalCoins}</strong></p>
   `;
 }
 

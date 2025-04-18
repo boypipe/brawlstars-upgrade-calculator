@@ -8,65 +8,81 @@
 </head>
 <body>
 
-  <h1>Brawl Stars Upgrade Calculator</h1>
+  <!-- Header with Logo -->
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Logo_of_Brawl_Stars.svg/1200px-Logo_of_Brawl_Stars.svg.png" alt="Brawl Stars Logo" id="logo">
+    <h1>Brawl Stars Upgrade Calculator</h1>
+  </header>
 
+  <!-- Form for input fields -->
   <form id="calc-form">
-    <label for="start_level">Start Level:</label>
-    <select id="start_level">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-    </select>
+    <div class="input-container">
+      <label for="start_level">Current Level:</label>
+      <select id="start_level">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
 
-    <label for="end_level">End Level:</label>
-    <select id="end_level">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-    </select>
+      <label for="end_level">Desired Level:</label>
+      <select id="end_level">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
+    </div>
 
-    <label for="gadgets">Gadgets:</label>
-    <input type="number" id="gadgets" value="0">
+    <div class="input-container">
+      <label for="gadgets">Gadgets:</label>
+      <input type="number" id="gadgets" value="0">
 
-    <label for="star_powers">Star Powers:</label>
-    <input type="number" id="star_powers" value="0">
+      <label for="star_powers">Star Powers:</label>
+      <input type="number" id="star_powers" value="0">
+    </div>
 
-    <label for="gears">Gears:</label>
-    <input type="number" id="gears" value="0">
+    <div class="input-container">
+      <label for="gears">Gears:</label>
+      <input type="number" id="gears" value="0">
 
-    <label for="epic_gears">Epic Gears:</label>
-    <input type="number" id="epic_gears" value="0">
+      <label for="epic_gears">Epic Gears:</label>
+      <input type="number" id="epic_gears" value="0">
+    </div>
 
-    <label for="mythic_gears">Mythic Gears:</label>
-    <input type="number" id="mythic_gears" value="0">
+    <div class="input-container">
+      <label for="mythic_gears">Mythic Gears:</label>
+      <input type="number" id="mythic_gears" value="0">
 
-    <label for="hypercharge">Hypercharge:</label>
-    <input type="number" id="hypercharge" value="0">
+      <label for="hypercharge">Hypercharge:</label>
+      <input type="number" id="hypercharge" value="0">
+    </div>
 
-    <label for="brawlers">Number of Brawlers:</label>
-    <input type="number" id="brawlers" value="1">
+    <div class="input-container">
+      <label for="brawlers">Number of Brawlers:</label>
+      <input type="number" id="brawlers" value="1">
+    </div>
 
     <!-- Button to trigger calculation -->
     <button type="button" id="calculateBtn">Calculate</button>
-
-    <div id="results"></div>
   </form>
+
+  <!-- Calculation results -->
+  <div id="results"></div>
 
   <script src="script.js"></script>
 </body>
