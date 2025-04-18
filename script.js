@@ -1,12 +1,12 @@
 document.getElementById("calculateBtn").addEventListener("click", function() {
   let startLevel = parseInt(document.getElementById("start_level").value);
   let endLevel = parseInt(document.getElementById("end_level").value);
-  let gadgets = parseInt(document.getElementById("gadgets").value);
-  let starPowers = parseInt(document.getElementById("star_powers").value);
-  let gears = parseInt(document.getElementById("gears").value);
-  let epicGears = parseInt(document.getElementById("epic_gears").value);
-  let mythicGears = parseInt(document.getElementById("mythic_gears").value);
-  let hypercharge = parseInt(document.getElementById("hypercharge").value);
+  let gadgets = parseInt(document.getElementById("gadgets").value) || 0;
+  let starPowers = parseInt(document.getElementById("star_powers").value) || 0;
+  let gears = parseInt(document.getElementById("gears").value) || 0;
+  let epicGears = parseInt(document.getElementById("epic_gears").value) || 0;
+  let mythicGears = parseInt(document.getElementById("mythic_gears").value) || 0;
+  let hypercharge = parseInt(document.getElementById("hypercharge").value) || 0;
   let brawlers = parseInt(document.getElementById("brawlers").value) || 1; // Default to 1 if empty
 
   // Power Points and Coins per level data
@@ -25,7 +25,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
   ];
 
   // Handle edge case: If no level is selected, skip the level cost calculations
-  if (!isNaN(startLevel) && !isNaN(endLevel) && startLevel < endLevel) {
+  if (startLevel && endLevel && startLevel < endLevel) {
     let powerPointsCost = 0;
     let coinsCost = 0;
 
