@@ -1,5 +1,5 @@
-// Function to update the results dynamically
-function updateResults() {
+// Function to update the results when the user clicks "Calculate"
+function calculateResults() {
   // Get values from form fields
   const start = parseInt(document.getElementById("start_level").value);
   const end = parseInt(document.getElementById("end_level").value);
@@ -11,9 +11,9 @@ function updateResults() {
   const hypercharge = parseInt(document.getElementById("hypercharge").value);
   const brawlers = parseInt(document.getElementById("brawlers").value);
 
-  // Validation for start and end levels
+  // Validate levels
   if (start >= end || start < 1 || end > 11) {
-    document.getElementById("results").innerHTML = "<p style='color:red;'>Invalid level range.</p>";
+    document.getElementById("results").innerHTML = "<p style='color:red;'>Please select a valid level range.</p>";
     return;
   }
 
@@ -47,10 +47,5 @@ function updateResults() {
   `;
 }
 
-// Listen for input changes to update results in real-time
-document.querySelectorAll('input, select').forEach(input => {
-  input.addEventListener('input', updateResults);
-});
-
-// Initialize results on page load
-window.onload = updateResults;
+// Listen for the "Calculate" button click to update results
+document.getElementById("calculateBtn").addEventListener("click", calculateResults);
