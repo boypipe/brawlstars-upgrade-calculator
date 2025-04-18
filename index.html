@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brawl Stars Upgrade Calculator</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://static.wikia.nocookie.net/brawlstars/images/9/98/Friendly_Battles.png/" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/brawlstars/images/9/98/Friendly_Battles.png/">
 </head>
 <body>
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Logo_of_Brawl_Stars.svg/1200px-Logo_of_Brawl_Stars.svg.png" alt="Brawl Stars Logo" id="logo">
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Logo_of_Brawl_Stars.svg/1200px-Logo_of_Brawl_Stars.svg.png" alt="Brawl Stars Logo">
     <h1>Brawl Stars Upgrade Calculator</h1>
   </header>
 
@@ -17,55 +18,57 @@
       <div class="row">
         <label for="start_level">Current Level:</label>
         <select id="start_level">
-          <option value="">--</option>
-          ${[...Array(11).keys()].map(i => `<option value="${i + 1}">${i + 1}</option>`).join('')}
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
         </select>
 
         <label for="end_level">Desired Level:</label>
         <select id="end_level">
-          <option value="">--</option>
-          ${[...Array(11).keys()].map(i => `<option value="${i + 1}">${i + 1}</option>`).join('')}
+          <option value="">Select</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
         </select>
       </div>
 
       <div class="row">
-        <label for="gadgets">Gadgets:</label>
-        <input type="number" id="gadgets">
-        <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" class="icon">
-
-        <label for="star_powers">Star Powers:</label>
-        <input type="number" id="star_powers">
-        <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" class="icon">
+        <label>Gadgets: <input type="number" id="gadgets" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp"></label>
+        <label>Star Powers: <input type="number" id="star_powers" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp"></label>
       </div>
 
       <div class="row">
-        <label for="gears">Gears:</label>
-        <input type="number" id="gears">
-        <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp" class="icon">
-
-        <label for="epic_gears">Epic Gears:</label>
-        <input type="number" id="epic_gears">
-        <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp" class="icon">
+        <label>Gears: <input type="number" id="gears" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp"></label>
+        <label>Epic Gears: <input type="number" id="epic_gears" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp"></label>
       </div>
 
       <div class="row">
-        <label for="mythic_gears">Mythic Gears:</label>
-        <input type="number" id="mythic_gears">
-        <img src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp" class="icon">
-
-        <label for="hypercharge">Hypercharge:</label>
-        <input type="number" id="hypercharge">
-        <img src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp" class="icon">
+        <label>Mythic Gears: <input type="number" id="mythic_gears" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp"></label>
+        <label>Hypercharge: <input type="number" id="hypercharge" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp"></label>
       </div>
 
       <div class="row">
-        <label for="brawlers">Number of Brawlers:</label>
-        <input type="number" id="brawlers" value="1">
+        <label>Number of Brawlers: <input type="number" id="brawlers" min="1" value="1"></label>
       </div>
 
       <div class="buttons">
         <button type="button" id="calculateBtn">Calculate</button>
-        <button type="reset" id="resetBtn">Reset</button>
+        <button type="button" id="resetBtn">Reset</button>
       </div>
     </form>
 
@@ -73,8 +76,7 @@
   </main>
 
   <footer>
-    <p>All rights reserved by Supercell. Icons from <a href="https://noff.gg" target="_blank">noff.gg</a> and <a href="https://brawlstars.fandom.com" target="_blank">Brawl Stars Wiki</a>.<br>
-      Coded by ChatGPT 🤖</p>
+    All rights reserved by Supercell • Coded by ChatGPT • Icons from <a href="https://noff.gg" target="_blank">noff.gg</a> and <a href="https://brawlstars.fandom.com" target="_blank">Brawl Stars Wiki</a>
   </footer>
 
   <script src="script.js"></script>

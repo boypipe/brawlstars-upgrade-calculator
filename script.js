@@ -1,41 +1,54 @@
-document.getElementById("calculateBtn").addEventListener("click", function () {
-  const getVal = id => parseInt(document.getElementById(id).value) || 0;
+const levelData = [
+  { level: 1, pp: 0, coins: 0 },
+  { level: 2, pp: 20, coins: 20 },
+  { level: 3, pp: 30, coins: 35 },
+  { level: 4, pp: 50, coins: 75 },
+  { level: 5, pp: 80, coins: 140 },
+  { level: 6, pp: 130, coins: 290 },
+  { level: 7, pp: 210, coins: 480 },
+  { level: 8, pp: 340, coins: 800 },
+  { level: 9, pp: 550, coins: 1250 },
+  { level: 10, pp: 890, coins: 1875 },
+  { level: 11, pp: 1440, coins: 2800 }
+];
 
+document.getElementById("calculateBtn").addEventListener("click", calculate);
+document.getElementById("resetBtn").addEventListener("click", () => {
+  document.getElementById("calc-form").reset();
+  document.getElementById("results").innerHTML = "";
+});
+
+function calculate() {
   const start = parseInt(document.getElementById("start_level").value);
   const end = parseInt(document.getElementById("end_level").value);
+  const gadgets = parseInt(document.getElementById("gadgets").value) || 0;
+  const starPowers = parseInt(document.getElementById("star_powers").value) || 0;
+  const gears = parseInt(document.getElementById("gears").value) || 0;
+  const epicGears = parseInt(document.getElementById("epic_gears").value) || 0;
+  const mythicGears = parseInt(document.getElementById("mythic_gears").value) || 0;
+  const hypercharges = parseInt(document.getElementById("hypercharge").value) || 0;
+  const brawlers = parseInt(document.getElementById("brawlers").value) || 1;
 
-  const gadgets = getVal("gadgets");
-  const stars = getVal("star_powers");
-  const gears = getVal("gears");
-  const epic = getVal("epic_gears");
-  const mythic = getVal("mythic_gears");
-  const hyper = getVal("hypercharge");
-  const brawlers = getVal("brawlers") || 1;
+  let totalPP = 0;
+  let totalCoins = 0;
 
-  const levelData = [
-    { coins: 20, points: 20 }, { coins: 35, points: 30 }, { coins: 75, points: 50 },
-    { coins: 140, points: 80 }, { coins: 290, points: 130 }, { coins: 480, points: 210 },
-    { coins: 800, points: 340 }, { coins: 1250, points: 550 }, { coins: 1875, points: 890 },
-    { coins: 2800, points: 1440 }
-  ];
-
-  let coins = 0, points = 0;
-
-  if (!isNaN(start) && !isNaN(end) && start < end) {
-    for (let i = start - 1; i < end - 1; i++) {
-      coins += levelData[i].coins;
-      points += levelData[i].points;
+  if (!isNaN(start) && !isNaN(end) && start >= 1 && end >= start && end <= 11) {
+    for (let i = start; i < end; i++) {
+      totalPP += levelData[i].pp;
+      totalCoins += levelData[i].coins;
     }
   }
 
-  coins += gadgets * 1000 + stars * 2000 + gears * 1000 + epic * 1500 + mythic * 2000 + hyper * 5000;
+  totalCoins += (gadgets * 1000) + (starPowers * 2000) + (gears * 1000);
+  totalCoins += (epicGears * 1500) + (mythicGears * 2000) + (hypercharges * 5000);
 
-  const totalCoins = coins * brawlers;
-  const totalPoints = points * brawlers;
+  totalPP *= brawlers;
+  totalCoins *= brawlers;
 
   document.getElementById("results").innerHTML = `
-    <h2>Result</h2>
-    <p><img src="https://static.wikia.nocookie.net/brawlstars/images/4/41/Power_Points.png/" class="result-icon"> Power Points: <strong>${totalPoints}</strong></p>
-    <p><img src="https://static.wikia.nocookie.net/brawlstars/images/f/f0/Coins.png/" class="result-icon"> Coins: <strong>${totalCoins}</strong></p>
+    <div>
+      <p><img src="https://static.wikia.nocookie.net/brawlstars/images/4/41/Power_Points.png/" width="30"> Power Points: <strong>${totalPP}</strong></p>
+      <p><img src="https://static.wikia.nocookie.net/brawlstars/images/f/f0/Coins.png/" width="30"> Coins: <strong>${totalCoins}</strong></p>
+    </div>
   `;
-});
+}
