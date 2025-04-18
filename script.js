@@ -52,3 +52,15 @@ function calculate() {
     </div>
   `;
 }
+
+document.getElementById("maxBrawlerBtn").addEventListener("click", () => {
+  document.getElementById("start_level").value = "1";
+  document.getElementById("end_level").value = "11";
+  document.getElementById("gadgets").value = "1";
+  document.getElementById("star_powers").value = "1";
+  document.getElementById("gears").value = "2";
+  document.getElementById("epic_gears").value = "";
+  document.getElementById("mythic_gears").value = "";
+  document.getElementById("hypercharge").value = "1";
+  document.getElementById("brawlers").value = "1";
+});
