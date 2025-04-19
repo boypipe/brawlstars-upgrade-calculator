@@ -32,18 +32,19 @@ function calculate() {
   let totalPP = 0;
   let totalCoins = 0;
 
+  // Calculate level upgrade costs (multiplied by number of brawlers)
   if (!isNaN(start) && !isNaN(end) && start >= 1 && end >= start && end <= 11) {
     for (let i = start; i < end; i++) {
       totalPP += levelData[i].pp;
       totalCoins += levelData[i].coins;
     }
+    totalPP *= brawlers;
+    totalCoins *= brawlers;
   }
 
+  // Add other costs (not multiplied by number of brawlers)
   totalCoins += (gadgets * 1000) + (starPowers * 2000) + (gears * 1000);
   totalCoins += (epicGears * 1500) + (mythicGears * 2000) + (hypercharges * 5000);
-
-  totalPP *= brawlers;
-  totalCoins *= brawlers;
 
   document.getElementById("results").innerHTML = `
     <div>
