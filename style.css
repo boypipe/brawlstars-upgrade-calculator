@@ -25,8 +25,8 @@ body {
 /* Header Styles */
 header {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px 0;
-  margin-bottom: 20px;
+  padding: 15px 0;
+  margin-bottom: 10px;
   position: relative;
   z-index: 10;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
@@ -57,40 +57,39 @@ h1 {
 
 /* Main Content */
 main {
-  max-width: 800px;
+  max-width: 700px;
   margin: 20px auto;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   position: relative;
   z-index: 1;
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
-/* Form Elements - Current and Desired Level on the same line */
+/* Form Elements - Strict 2 items per row */
 .row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
-  margin: 15px 0;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .row label {
-  flex: 1 1 calc(50% - 15px);
-  min-width: 220px;
+  flex: 1;
+  min-width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  white-space: nowrap;
+  font-size: 1.1rem;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  display: none;
 }
 
-input[type="number"], select {
+select {
   padding: 6px;
   font-size: 1.1rem;
-  width: 60px;
+  width: 80px;
   text-align: center;
   margin: 0 5px;
   background-color: rgba(255,255,255,0.9);
@@ -99,16 +98,16 @@ input[type="number"], select {
 }
 
 .icon {
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   vertical-align: middle;
-  margin-left: 5px;
+  margin: 5px;
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
 }
 
 /* Buttons */
 button {
-  padding: 10px 20px;
+  padding: 8px 16px;
   font-size: 1.1rem;
   margin: 10px;
   cursor: pointer;
@@ -148,15 +147,15 @@ button:hover {
 
 /* Results Section */
 #results {
-  margin-top: 25px;
+  margin-top: 20px;
   font-size: 1.4rem;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* Footer */
 footer {
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 30px;
+  padding: 15px;
   font-size: 0.9rem;
   background-color: rgba(0, 0, 0, 0.7);
   position: relative;
@@ -180,46 +179,49 @@ a:hover {
   body {
     background-attachment: scroll;
   }
-  
+
   header, main, footer {
     background-color: rgba(0, 0, 0, 0.75);
     margin: 0;
     border-radius: 0;
   }
-  
+
   #logo {
     width: 110px;
   }
-  
+
   #title-gif {
     width: 70px;
     height: 70px;
   }
-  
+
   h1 {
     font-size: 1.8rem;
   }
-  
+
   main {
-    padding: 20px 15px;
+    padding: 15px;
   }
-  
-  .row label {
-    flex: 1 1 calc(50% - 10px);
-    min-width: 160px;
-    font-size: 1.1rem;
+
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  select {
+    width: 100%;
+  }
+
   .icon {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
   }
-  
+
   button {
     padding: 8px 16px;
     font-size: 1rem;
   }
-  
+
   #results {
     font-size: 1.2rem;
   }
@@ -231,9 +233,9 @@ a:hover {
     min-width: 120px;
     font-size: 1rem;
   }
-  
-  input[type="number"], select {
-    width: 50px;
+
+  select {
+    width: 60%;
     font-size: 1rem;
   }
 }
