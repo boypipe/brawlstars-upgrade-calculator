@@ -16,8 +16,8 @@
 
   <main>
     <form id="calc-form">
-      <div class="row">
-        <div>
+      <div class="row row-top">
+        <div class="level-column">
           <label for="start_level">Current Level:</label>
           <select id="start_level">
             <option value="">Select</option>
@@ -33,8 +33,7 @@
             <option value="10">10</option>
           </select>
         </div>
-        
-        <div>
+        <div class="level-column">
           <label for="end_level">Desired Level:</label>
           <select id="end_level">
             <option value="">Select</option>
@@ -53,25 +52,32 @@
       </div>
 
       <div class="row">
-        <label>Number of Brawlers: <input type="number" id="brawlers" min="1" value="1"></label>
+        <label class="centered-label">Number of Brawlers:</label>
+        <input type="number" id="brawlers" min="1" value="1">
       </div>
 
-      <div class="row">
-        <div>
-          <input type="number" id="gadgets" min="0">
-          <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget.png" alt="Gadget Icon">
-        </div>
-        <div>
-          <input type="number" id="star-powers" min="0">
-          <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_star_power.png" alt="Star Power Icon">
-        </div>
+      <div class="row icon-row">
+        <label><input type="number" id="gadgets" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" alt="Gadget"></label>
+        <label><input type="number" id="star_powers" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" alt="Star Power"></label>
+      </div>
+
+      <div class="row icon-row">
+        <label><input type="number" id="gears" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp" alt="Gear"></label>
+        <label><input type="number" id="epic_gears" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp" alt="Epic Gear"></label>
+      </div>
+
+      <div class="row icon-row">
+        <label><input type="number" id="mythic_gears" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp" alt="Mythic Gear"></label>
+        <label><input type="number" id="hypercharge" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp" alt="Hypercharge"></label>
       </div>
 
       <div class="buttons">
-        <button type="button" id="calc-btn">Calculate Upgrade Cost</button>
-        <div class="preset-button">
-          <button type="button" id="preset-5">Preset 5</button>
-        </div>
+        <button type="button" id="calculateBtn">Calculate</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="preset-button">
+        <button type="button" id="maxBrawlerBtn">Max Brawler (Normal Gears)</button>
       </div>
     </form>
 
@@ -79,9 +85,9 @@
   </main>
 
   <footer>
-    <p>Created by [Your Name]. Find me on <a href="https://github.com/your-github">GitHub</a>!</p>
+    All rights reserved by Supercell • Coded by ChatGPT • Icons from <a href="https://noff.gg" target="_blank">noff.gg</a> and <a href="https://brawlstars.fandom.com" target="_blank">Brawl Stars Wiki</a>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
