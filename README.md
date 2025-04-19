@@ -7,4 +7,5 @@ A clean and compact web app that helps players calculate the total resources nee
 
 Designed with a responsive layout and quick presets to simplify planning your path to maxing out your roster.
 
-![image](https://github.com/user-attachments/assets/b56ef5d9-1f35-4185-804a-45661831b70d)
+![image](https://github.com/user-attachments/assets/0e3dcc27-62f4-4557-862b-e6d660034176)
+
