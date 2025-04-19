@@ -1,78 +1,167 @@
-/* Add this at the top of your style.css */
+/* Base Styles */
 html {
   height: 100%;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   font-family: 'Arial', sans-serif;
   background: url('https://pbs.twimg.com/media/GV10UFtXIAADhET?format=jpg&name=4096x4096') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
   color: #fff;
   text-align: center;
   margin: 0;
   padding: 0;
   min-height: 100%;
   position: relative;
+  -webkit-background-attachment: fixed;
+  background-attachment: fixed;
 }
 
-/* Main content background */
+/* Header Styles */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+#logo {
+  width: 100px; /* Reduced from 150px */
+  height: auto;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Main Content */
 main {
   max-width: 800px;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.7); /* Black background restored */
-  padding: 30px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 25px;
   border-radius: 12px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Icon sizing */
+/* Form Elements */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+input[type="number"], select {
+  padding: 6px;
+  font-size: 1rem;
+  width: 60px;
+  text-align: center;
+  margin: 0 5px;
+}
+
 .icon {
-  width: 20px; /* Reduced from 30px */
-  height: auto;
+  width: 22px;
+  height: 22px;
   vertical-align: middle;
+  margin-left: 5px;
 }
 
-/* Mobile responsiveness */
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Results Section */
+#results {
+  margin-top: 25px;
+  font-size: 1.3rem;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  header {
+    padding: 12px 0;
+  }
+  
+  #logo {
+    width: 80px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  main {
+    padding: 20px 15px;
+    margin: 15px 10px;
+  }
+  
   .row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 10px;
   }
   
   label {
-    margin: 5px 0;
     font-size: 1rem;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
   }
   
   input[type="number"], select {
     width: 50px;
-    padding: 4px; /* Slightly smaller padding */
-  }
-  
-  main {
-    padding: 20px;
-    margin: 0 10px;
-  }
-  
-  #logo {
-    width: 120px;
+    padding: 5px;
+    font-size: 0.95rem;
   }
   
   .icon {
-    width: 18px; /* Even smaller icons on mobile */
+    width: 20px;
+    height: 20px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+  
+  #results {
+    font-size: 1.2rem;
   }
 }
 
-/* iOS specific fixes */
+/* iOS Specific Fixes */
 @supports (-webkit-touch-callout: none) {
   body {
-    background-attachment: scroll;
-    -webkit-background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
