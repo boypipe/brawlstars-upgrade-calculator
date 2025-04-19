@@ -71,16 +71,39 @@ main {
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 15px;
   margin: 15px 0;
+}
+
+/* Number of Brawlers row */
+.row:nth-child(2) {
+  justify-content: center;
+}
+
+.row:nth-child(2) label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Gear rows */
+.row:nth-child(3),
+.row:nth-child(4),
+.row:nth-child(5) {
+  gap: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Level selection row */
 #calc-form > .row:first-child {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
+  gap: 30px;
 }
 
 #calc-form > .row:first-child label {
@@ -107,7 +130,6 @@ input[type="number"] {
   font-size: 1.1rem;
   width: 60px;
   text-align: center;
-  margin: 0 5px;
   background-color: rgba(255,255,255,0.9);
   border: 1px solid #444;
   border-radius: 4px;
