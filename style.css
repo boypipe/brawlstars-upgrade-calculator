@@ -8,7 +8,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: url('https://pbs.twimg.com/media/GV10UFtXIAADhET?format=jpg&name=4096x4096') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed; /* This fixes the background on mobile */
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
   margin: 0;
@@ -17,46 +17,62 @@ body {
   position: relative;
 }
 
-/* Update the row class for mobile responsiveness */
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin: 15px 0;
-  flex-wrap: wrap;
+/* Main content background */
+main {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background restored */
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Icon sizing */
+.icon {
+  width: 20px; /* Reduced from 30px */
+  height: auto;
+  vertical-align: middle;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .row {
-    flex-direction: row; /* Keep items in a row */
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    justify-content: space-around; /* Better spacing on mobile */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px; /* Reduced gap for mobile */
   }
   
   label {
     margin: 5px 0;
-    font-size: 1rem; /* Slightly smaller font on mobile */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
   
   input[type="number"], select {
-    width: 50px; /* Smaller inputs on mobile */
+    width: 50px;
+    padding: 4px; /* Slightly smaller padding */
   }
   
   main {
-    padding: 15px; /* Less padding on mobile */
-    margin: 0 10px; /* Add some side margins */
+    padding: 20px;
+    margin: 0 10px;
   }
   
   #logo {
-    width: 120px; /* Slightly smaller logo on mobile */
+    width: 120px;
+  }
+  
+  .icon {
+    width: 18px; /* Even smaller icons on mobile */
   }
 }
 
-/* Prevent background movement on iOS */
+/* iOS specific fixes */
 @supports (-webkit-touch-callout: none) {
   body {
     background-attachment: scroll;
+    -webkit-background-size: cover;
   }
 }
