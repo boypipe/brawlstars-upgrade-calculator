@@ -16,66 +16,62 @@
 
   <main>
     <form id="calc-form">
-      <div class="row row-top">
-        <div class="level-column">
-          <label for="start_level">Current Level:</label>
-          <select id="start_level">
-            <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </div>
-        <div class="level-column">
-          <label for="end_level">Desired Level:</label>
-          <select id="end_level">
-            <option value="">Select</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-          </select>
-        </div>
+      <div class="row">
+        <label for="start_level">Current Level:</label>
+        <select id="start_level">
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <label for="end_level">Desired Level:</label>
+        <select id="end_level">
+          <option value="">Select</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+        </select>
       </div>
 
       <div class="row">
-        <label class="centered-label">Number of Brawlers:</label>
-        <input type="number" id="brawlers" min="1" value="1">
+        <label>Number of Brawlers: <input type="number" id="brawlers" min="1" value="1"></label>
       </div>
 
-      <div class="row icon-row">
-        <label><input type="number" id="gadgets" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" alt="Gadget"></label>
-        <label><input type="number" id="star_powers" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" alt="Star Power"></label>
+      <div class="row">
+        <label><input type="number" id="gadgets" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp" alt="Gadget"></label>
+        <label><input type="number" id="star_powers" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp" alt="Star Power"></label>
       </div>
 
-      <div class="row icon-row">
-        <label><input type="number" id="gears" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp" alt="Gear"></label>
-        <label><input type="number" id="epic_gears" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp" alt="Epic Gear"></label>
+      <div class="row">
+        <label><input type="number" id="gears" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/gear_shield.webp" alt="Gear"></label>
+        <label><input type="number" id="epic_gears" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/gear_reload.webp" alt="Epic Gear"></label>
       </div>
 
-      <div class="row icon-row">
-        <label><input type="number" id="mythic_gears" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp" alt="Mythic Gear"></label>
-        <label><input type="number" id="hypercharge" min="0"> <img class="icon large" src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp" alt="Hypercharge"></label>
+      <div class="row">
+        <label><input type="number" id="mythic_gears" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/gear_eve.webp" alt="Mythic Gear"></label>
+        <label><input type="number" id="hypercharge" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp" alt="Hypercharge"></label>
       </div>
 
       <div class="buttons">
         <button type="button" id="calculateBtn">Calculate</button>
         <button type="button" id="resetBtn">Reset</button>
       </div>
-
+      
       <div class="preset-button">
         <button type="button" id="maxBrawlerBtn">Max Brawler (Normal Gears)</button>
       </div>
