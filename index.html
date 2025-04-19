@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brawl Stars Upgrade Calculator</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/brawlstars/images/9/98/Friendly_Battles.png/">
+  <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/brawlstar/images/9/98/Friendly_Battles.png/">
 </head>
 <body>
   <header>
@@ -48,6 +48,10 @@
       </div>
 
       <div class="row">
+        <label>Number of Brawlers: <input type="number" id="brawlers" min="1" value="1"></label>
+      </div>
+
+      <div class="row">
         <label>Gadgets: <input type="number" id="gadgets" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_gadget_02.webp"></label>
         <label>Star Powers: <input type="number" id="star_powers" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_starpower_01.webp"></label>
       </div>
@@ -62,18 +66,13 @@
         <label>Hypercharge: <input type="number" id="hypercharge" min="0"> <img class="icon" src="https://www.noff.gg/brawl-stars/res/img/items/eve_hypercharge.webp"></label>
       </div>
 
-      <div class="row">
-        <label>Number of Brawlers: <input type="number" id="brawlers" min="1" value="1"></label>
-      </div>
-
       <div class="buttons">
         <button type="button" id="calculateBtn">Calculate</button>
         <button type="button" id="resetBtn">Reset</button>
       </div>
-	<div class="preset-button">
- 	 <button type="button" id="maxBrawlerBtn">Max Brawler (Normal Gears)</button>
-	</div>
-
+      <div class="preset-button">
+        <button type="button" id="maxBrawlerBtn">Max Brawler (Normal Gears)</button>
+      </div>
     </form>
 
     <div id="results"></div>
