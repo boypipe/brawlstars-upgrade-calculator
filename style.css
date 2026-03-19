@@ -10,7 +10,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://pbs.twimg.com/media/GV10UFtXIAADhET?format=jpg&name=4096x4096') no-repeat center center fixed;
+    url('https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9yaXA0eXllVU1ENkN2Rno5c0JIZi5wbmcifQ:supercell:ZZZSWG4DvRZNpo3DqiaO3J6EpqUwit2X33PPuqUDCjw?width=2400') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -49,10 +49,12 @@ header {
 }
 
 h1 {
+  font-family: 'Lilita One', sans-serif;
   font-size: 2.1rem;
   margin: 0;
   padding: 0 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 3px 3px 0px #000;
+  letter-spacing: 1px;
 }
 
 /* Main Content */
