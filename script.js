@@ -27,6 +27,7 @@ function calculate() {
   const epicGears = parseInt(document.getElementById("epic_gears").value) || 0;
   const mythicGears = parseInt(document.getElementById("mythic_gears").value) || 0;
   const hypercharges = parseInt(document.getElementById("hypercharge").value) || 0;
+  const buffie = parseInt(document.getElementById("buffie").value) || 0;
   const brawlers = parseInt(document.getElementById("brawlers").value) || 1;
 
   let totalPP = 0;
@@ -45,11 +46,13 @@ function calculate() {
   // Add other costs (not multiplied by number of brawlers)
   totalCoins += (gadgets * 1000) + (starPowers * 2000) + (gears * 1000);
   totalCoins += (epicGears * 1500) + (mythicGears * 2000) + (hypercharges * 5000);
+  totalCoins += (buffie * 1000);
+  totalPP += (buffie * 2000);
 
   document.getElementById("results").innerHTML = `
     <div>
-      <p><img src="https://static.wikia.nocookie.net/brawlstars/images/4/41/Power_Points.png/" width="30"> Power Points: <strong>${totalPP}</strong></p>
-      <p><img src="https://static.wikia.nocookie.net/brawlstars/images/f/f0/Coins.png/" width="30"> Coins: <strong>${totalCoins}</strong></p>
+      <p><img src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9pb1BYVDRVcUJHNXJ0NmJqbUc5NS5wbmcifQ:supercell:hBdZ0EERz8VjNW_z9uEhL0QxqPzhK4NK6b8L5lnbCw0?width=2400" width="30"> Power Points: <strong>${totalPP}</strong></p>
+      <p><img src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9FVDREWWh2WENMekpQaXc5Nk50WC5wbmcifQ:supercell:MBP987-4m4cQa1vpsJuaEpTEDtXA4eW6T9rqMSjqaSg?width=2400" width="30"> Coins: <strong>${totalCoins}</strong></p>
     </div>
   `;
 }
