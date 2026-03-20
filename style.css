@@ -8,6 +8,7 @@ html, body {
 
 body {
   font-family: 'Arial', sans-serif;
+  font-weight: bold;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9yaXA0eXllVU1ENkN2Rno5c0JIZi5wbmcifQ:supercell:ZZZSWG4DvRZNpo3DqiaO3J6EpqUwit2X33PPuqUDCjw?width=2400') no-repeat center center fixed;
