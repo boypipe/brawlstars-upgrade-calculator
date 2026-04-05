@@ -9,4 +9,4 @@ Now inclduing Buffies!
 
 Designed with a responsive layout and quick presets to simplify planning your path to maxing out your roster.
 
-<img width="1731" height="1159" alt="image" src="https://github.com/user-attachments/assets/a8a4a875-2303-4a91-86f3-e11f1395f891" />
+<img width="1379" height="1240" alt="image" src="https://github.com/user-attachments/assets/3c0650db-d3a9-413c-a0fc-84fcb2329006" />
