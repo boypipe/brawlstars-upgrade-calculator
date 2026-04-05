@@ -57,6 +57,28 @@ function calculate() {
   `;
 }
 
+function setLevels(start, end) {
+  // reset entire form
+  document.getElementById("calc-form").reset();
+
+  // clear results (same as your resetBtn logic)
+  document.getElementById("results").innerHTML = "";
+
+  // set levels
+  document.getElementById("start_level").value = start;
+  document.getElementById("end_level").value = end;
+
+  // optional: enforce defaults after reset
+  document.getElementById("brawlers").value = "1";
+
+  // auto calculate
+  document.getElementById("calculateBtn").click();
+}
+
+document.getElementById("lvl1to7Btn").addEventListener("click", () => setLevels(1,7));
+document.getElementById("lvl1to9Btn").addEventListener("click", () => setLevels(1,9));
+document.getElementById("lvl1to11Btn").addEventListener("click", () => setLevels(1,11));
+document.getElementById("lvl9to11Btn").addEventListener("click", () => setLevels(9,11));
 document.getElementById("maxBrawlerBtn").addEventListener("click", () => {
   document.getElementById("start_level").value = "1";
   document.getElementById("end_level").value = "11";
@@ -67,4 +89,6 @@ document.getElementById("maxBrawlerBtn").addEventListener("click", () => {
   document.getElementById("mythic_gears").value = "";
   document.getElementById("hypercharge").value = "1";
   document.getElementById("brawlers").value = "1";
+ // auto calculate
+  document.getElementById("calculateBtn").click();
 });
