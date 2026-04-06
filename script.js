@@ -75,20 +75,34 @@ function setLevels(start, end) {
   document.getElementById("calculateBtn").click();
 }
 
+function applyPreset(values) {
+  document.getElementById("calc-form").reset();
+  document.getElementById("results").innerHTML = "";
+
+  Object.entries(values).forEach(([id, value]) => {
+    document.getElementById(id).value = value;
+  });
+
+  document.getElementById("calculateBtn").click();
+}
+
+//set levels
 document.getElementById("lvl1to7Btn").addEventListener("click", () => setLevels(1,7));
 document.getElementById("lvl1to9Btn").addEventListener("click", () => setLevels(1,9));
 document.getElementById("lvl1to11Btn").addEventListener("click", () => setLevels(1,11));
 document.getElementById("lvl9to11Btn").addEventListener("click", () => setLevels(9,11));
+
+//set max bralwer
 document.getElementById("maxBrawlerBtn").addEventListener("click", () => {
-  document.getElementById("start_level").value = "1";
-  document.getElementById("end_level").value = "11";
-  document.getElementById("gadgets").value = "1";
-  document.getElementById("star_powers").value = "1";
-  document.getElementById("gears").value = "2";
-  document.getElementById("epic_gears").value = "";
-  document.getElementById("mythic_gears").value = "";
-  document.getElementById("hypercharge").value = "1";
-  document.getElementById("brawlers").value = "1";
- // auto calculate
-  document.getElementById("calculateBtn").click();
+  applyPreset({
+    start_level: "1",
+    end_level: "11",
+    gadgets: "1",
+    star_powers: "1",
+    gears: "2",
+    epic_gears: "",
+    mythic_gears: "",
+    hypercharge: "1",
+    brawlers: "1"
+  });
 });
